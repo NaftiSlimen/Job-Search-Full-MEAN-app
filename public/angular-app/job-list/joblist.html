@@ -3,7 +3,10 @@
  <ul style="font-size:1vw">
     <li ng-repeat="job  in jobListController.jobs" ><a ng-href={{"http://localhost:5000/#/jobs/"+job._id}}>{{job.title}}</a></li>
 </ul>
-
+<div>
+    <button style="color:black" ng-click="jobListController.previousPage(jobListController.number)">Previous</button>
+    <button style="color:black" ng-click="jobListController.nextPage(jobListController.number)">Next</button>
+    <p> </p></div>
 
 <div style="font-size:2vw">Add job</div>
 

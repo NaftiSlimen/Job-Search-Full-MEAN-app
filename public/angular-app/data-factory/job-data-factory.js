@@ -7,8 +7,8 @@ function jobDataFactory($http) {
         fullyUpdateJob:fullyUpdateJob,
         deleteJob:deleteJob,
     };
-    function getAlljobs() {
-        return $http.get("/api/job")
+    function getAlljobs(number) {
+        return $http.get("/api/job?offset="+number+"&"+"count=5")
             .then(complete)
             .catch(failed);
     }

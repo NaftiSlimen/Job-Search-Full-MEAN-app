@@ -5,12 +5,14 @@ const showAll = function (req, res) {
     const response = {
         status: 200,
     };
-    const offset=0;
-    const count=5;
+    var offset=0;
+    var count=5;
     if (req.query.offset&&req.query.count){
-        offset=parseInt(offset);
-        count=parseInt(count);
+        offset=parseInt(req.query.offset);
+        count=parseInt(req.query.count);
     }
+    console.log(offset);
+    console.log(count);
     jobDB.find().skip(offset).limit(count).exec(function(err,jobs){
         if (err){
             response.status=500;
@@ -133,7 +135,7 @@ const partiallyUpdateJob = function (req, res) {
             response.message = err;
         } else {
             if (req.body.location||req.body.title||req.body.salary||req.body.description||req.body.experience||req.body.skills||req.body.postDate){
-                if (req.body.location) job.location=req.body.location;
+                if (req.body.location&&req.body.location.city&&req.body.location.state) job.location=req.body.location;
                 if (req.body.title) job.title=req.body.title;
                 if (req.body.salary) job.salary=req.body.salary;
                 if (req.body.description) job.description=req.body.description;
