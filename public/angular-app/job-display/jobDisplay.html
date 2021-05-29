@@ -1,0 +1,61 @@
+<div style="font-size:2vw">Job offer details:</div>
+<BR/>
+<button type="submit" class="btn-success" ng-click="jobDisplayController.deleteJob(jobDisplayController.job._id)">Delete Job</button>
+<BR/>
+
+<BR/>
+
+<div style="font-size:1vw">
+    title: {{jobDisplayController.job.title}}
+    <BR/>
+    city: {{jobDisplayController.job.location.city}}
+    <BR/>
+    state: {{jobDisplayController.job.location.state}}
+    <BR/>
+    salary: {{jobDisplayController.job.salary|currency}}
+    <BR/>
+    description: {{jobDisplayController.job.description}}
+    <BR/>
+    experience: {{jobDisplayController.job.experience}}
+    <BR/>
+    skills:     <ul style="font-size:2vw">
+        <li style="font-size:1vw" ng-repeat="skill  in jobDisplayController.job.skills" >{{skill}}</li>
+    </ul>
+    postDate: {{jobDisplayController.job.postDate|date}}
+</div>
+
+<BR/>
+<BR/>
+<BR/>
+<BR/>
+
+<form style="font-size:1vw" name="jobDisplayController.editJobForm" ng-submit="jobDisplayController.editJobF(jobDisplayController.job._id)" >
+
+    To fully edit this job please fill in all the fields below:<BR/>
+
+    title: <input ng-value="jobDisplayController.job.title" type="text" name="title" required ng-model="jobDisplayController.newjobTitle" style="color:black"/><BR/>
+
+    City: <input type="text" ng-value="jobDisplayController.job.location.city" name="city" required ng-model="jobDisplayController.newjobCity" style="color:black"/><BR/>
+
+    State: <input type="text" ng-value="jobDisplayController.job.location.state" name="state" required ng-model="jobDisplayController.newjobState" style="color:black"/><BR/>
+
+    Desription: <input type="text" ng-value="jobDisplayController.job.description" name="desription" required ng-model="jobDisplayController.newjobDescription" style="color:black"/><BR/>
+
+    <BR/>
+    Salary: <input type="number" ng-value="jobDisplayController.job.salary" name="salary" required ng-model="jobDisplayController.newjobSalary" style="color:black"/>
+
+    <BR/>
+
+    Experience: <input type="number" ng-value="jobDisplayController.job.experience" name="experience" required ng-model="jobDisplayController.newjobExperience" style="color:black"/><BR/>
+    
+    Skills: <input type="text" name="skills" ng-value="jobDisplayController.job.skills" required ng-model="jobDisplayController.newjobSkills" style="color:black"/><span>Skill list must be in the form : "skill1","skill2",....</span><BR/>
+
+    Post Date: <input type="number" name="date" ng-value="jobDisplayController.job.postDate" required ng-model="jobDisplayController.newjobDate" style="color:black"/><BR/>
+
+
+    <button type="submit" class="btn-success">Edit Job</button><BR/>
+    <BR/>
+    <BR/>
+    <BR/>
+    <BR/>
+    

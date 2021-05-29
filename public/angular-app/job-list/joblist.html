@@ -1,0 +1,51 @@
+<div style="font-size:2vw">List of Job offers:</div>
+<BR/>
+ <ul style="font-size:1vw">
+    <li ng-repeat="job  in jobListController.jobs" ><a ng-href={{"http://localhost:5000/#/jobs/"+job._id}}>{{job.title}}</a></li>
+</ul>
+
+
+<div style="font-size:2vw">Add job</div>
+
+<form style="font-size:1vw" name="jobListController.addJobForm" ng-submit="jobListController.addJobF()" >
+
+    To add a new job please fill in all the fields below:<BR/>
+
+    title: <input type="text" name="title" required ng-model="jobListController.jobTitle" style="color:black"/><BR/>
+
+    City: <input type="text" name="city" required ng-model="jobListController.jobCity" style="color:black"/><BR/>
+
+    State: <input type="text" name="state" required ng-model="jobListController.jobState" style="color:black"/><BR/>
+
+    Desription: <input type="text" name="desription" required ng-model="jobListController.jobDescription" style="color:black"/><BR/>
+
+    <BR/>
+    Salary: <input type="number" name="salary" required ng-model="jobListController.jobSalary" style="color:black"/>
+
+    <BR/>
+
+    Experience: <input type="number" name="experience" required ng-model="jobListController.jobExperience" style="color:black"/><BR/>
+    
+    Skills: <input type="text" name="skills" required ng-model="jobListController.jobSkills" style="color:black"/><span>Skill list must be in the form : "skill1","skill2",....</span><BR/>
+
+    Post Date: <input type="number" name="date" required ng-model="jobListController.jobDate" style="color:black"/><BR/>
+
+
+    <button type="submit" class="btn-success">Add Job</button><BR/>
+
+</form>
+<BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>
+                    <BR/>

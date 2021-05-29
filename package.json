@@ -1,0 +1,31 @@
+{
+  "name": "job-search-full-mean-app",
+  "version": "1.0.0",
+  "description": "This is a fullstack MEAN app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaftiSlimen/Job-Search-Full-MEAN-app.git"
+  },
+  "keywords": [
+    "MEAN",
+    "FULLSTACK",
+    "JOB"
+  ],
+  "author": "Slimen Nafti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaftiSlimen/Job-Search-Full-MEAN-app/issues"
+  },
+  "homepage": "https://github.com/NaftiSlimen/Job-Search-Full-MEAN-app#readme",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  }
+}
